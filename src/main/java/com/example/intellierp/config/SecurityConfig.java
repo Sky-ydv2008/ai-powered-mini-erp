@@ -74,6 +74,9 @@ public class SecurityConfig {
                         .requestMatchers(
                                 "/",
                                 "/*.html",
+                                "/manifest.json",
+                                "/sw.js",
+                                "/icons/**",
                                 "/css/**",
                                 "/js/**",
                                 "/images/**",
