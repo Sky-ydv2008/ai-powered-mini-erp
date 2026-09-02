@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Decision Intelligence Center — IntelliERP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/tables.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <style>
+        .ai-tabs {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .ai-tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .ai-tab-btn:hover {
+            color: #fff;
+            border-color: rgba(255,255,255,0.2);
+        }
+        .ai-tab-btn.active {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            color: #fff;
+        }
+        .xai-section-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        .xai-label {
+            font-size: 11.5px;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-icon">IE</div>
+                <div class="brand-text">IntelliERP</div>
+                <div class="brand-badge">AI 2.0</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Core Operations</div>
+                <a href="/dashboard.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/sales.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>Sales & POS</span>
+                </a>
+                <a href="/purchases.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Purchases</span>
+                </a>
+                <a href="/inventory.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <span>Inventory & Ledger</span>
+                </a>
+                <a href="/products.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span>Products & BCG</span>
+                </a>
+                <a href="/suppliers.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Suppliers & Loss</span>
+                </a>
+                <a href="/customers.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span>Customers CRM</span>
+                </a>
+                <a href="/expenses.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    <span>Expenses</span>
+                </a>
+
+                <div class="nav-section-title">Decision Intelligence</div>
+                <a href="/ai-insights.html" class="nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>AI Decision Center</span>
+                    <span class="nav-badge">Active</span>
+                </a>
+                <a href="/assistant.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <span>Ask Your Data</span>
+                </a>
+                <a href="/reports.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>Profit & Loss Center</span>
+                </a>
+
+                <div class="nav-section-title admin-only">System</div>
+                <a href="/settings.html" class="nav-link admin-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    <span>Settings & Logs</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile-compact">
+                    <div class="user-avatar user-avatar-display">A</div>
+                    <div class="user-info">
+                        <div class="user-name user-name-display">Loading...</div>
+                        <div class="user-role-badge user-role-display">ADMIN</div>
+                    </div>
+                    <button onclick="Auth.logout()" class="action-btn" title="Logout">⏻</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-wrapper">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h1 class="page-title">AI Decision Intelligence & Explainable AI (XAI)</h1>
+                </div>
+                <div class="topbar-right">
+                    <button class="btn btn-primary" onclick="runAiAnalysis()">⚡ Run Real-Time AI Engine</button>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <!-- Severity Filter Tabs -->
+                <div class="ai-tabs">
+                    <button class="ai-tab-btn active" data-severity="ALL" onclick="filterInsightsBySeverity('ALL')">
+                        All Intelligence Signals (<span id="count-all">0</span>)
+                    </button>
+                    <button class="ai-tab-btn" data-severity="CRITICAL" onclick="filterInsightsBySeverity('CRITICAL')">
+                        🔴 Critical Risks (<span id="count-critical">0</span>)
+                    </button>
+                    <button class="ai-tab-btn" data-severity="WARNING" onclick="filterInsightsBySeverity('WARNING')">
+                        🟠 Operational Warnings (<span id="count-warning">0</span>)
+                    </button>
+                    <button class="ai-tab-btn" data-severity="OPPORTUNITY" onclick="filterInsightsBySeverity('OPPORTUNITY')">
+                        🟢 Growth Opportunities (<span id="count-opportunity">0</span>)
+                    </button>
+                </div>
+
+                <!-- Insights Grid Deck -->
+                <div id="ai-insights-deck" class="charts-grid-3">
+                    <div class="empty-state" style="grid-column: 1 / -1;">
+                        <div class="empty-icon">⚙</div>
+                        <div class="empty-text">Loading intelligence deck...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Deep Explainable AI Modal -->
+    <div id="xai-modal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 680px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span id="xai-modal-badge"></span>
+                    <span id="xai-modal-confidence" class="text-muted" style="font-size: 12px; font-weight: 600;"></span>
+                </div>
+                <button class="modal-close" onclick="Utils.closeModal('xai-modal')">✕</button>
+            </div>
+
+            <h2 id="xai-modal-title" style="font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 16px;">Insight Title</h2>
+
+            <!-- 1. Problem Statement -->
+            <div class="xai-section-box">
+                <div class="xai-label" style="color: #93c5fd;"><span>🔍</span> 1. What Happened (Anomaly / Event)</div>
+                <p id="xai-problem-text" style="font-size: 13.5px; color: var(--text-primary); line-height: 1.5;"></p>
+            </div>
+
+            <!-- 2. Evidence -->
+            <div class="xai-section-box">
+                <div class="xai-label" style="color: #fbbf24;"><span>📊</span> 2. Mathematical Evidence & Baseline Deviation</div>
+                <div id="xai-evidence-box" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-top: 8px;"></div>
+            </div>
+
+            <!-- 3. Root Cause -->
+            <div class="xai-section-box" style="border-left: 3px solid var(--warning);">
+                <div class="xai-label" style="color: #f59e0b;"><span>⚙</span> 3. Root Cause Diagnostics (Why it happened)</div>
+                <p id="xai-rootcause-text" style="font-size: 13.5px; color: #fff; font-weight: 600; line-height: 1.5;"></p>
+            </div>
+
+            <!-- 4. Financial Impact -->
+            <div class="xai-section-box" style="border-left: 3px solid var(--danger);">
+                <div class="xai-label" style="color: #ef4444;"><span>💸</span> 4. Projected Financial Loss / Impact</div>
+                <div style="display: flex; align-items: baseline; gap: 8px;">
+                    <strong style="font-size: 20px; color: var(--danger);" id="xai-impact-val">₹0.00</strong>
+                    <span style="font-size: 12px; color: var(--text-muted);" id="xai-impact-desc"></span>
+                </div>
+            </div>
+
+            <!-- 5. Actionable Recommendation -->
+            <div class="xai-section-box" style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid var(--success); border-color: rgba(16, 185, 129, 0.4);">
+                <div class="xai-label" style="color: #34d399;"><span>🎯</span> 5. Prescriptive Recommendation (Action to take)</div>
+                <p id="xai-rec-text" style="font-size: 13.5px; color: #fff; font-weight: 600; line-height: 1.5;"></p>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+                <button type="button" class="btn btn-secondary" onclick="Utils.closeModal('xai-modal')">Close</button>
+                <button type="button" class="btn btn-primary" onclick="markActiveInsightRead()">✓ Mark as Reviewed</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/api.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/ai.js"></script>
+</body>
+</html>

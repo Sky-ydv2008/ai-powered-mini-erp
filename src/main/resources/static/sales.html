@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales & POS — IntelliERP</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/tables.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="brand-icon">IE</div>
+                <div class="brand-text">IntelliERP</div>
+                <div class="brand-badge">AI 2.0</div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">Core Operations</div>
+                <a href="/dashboard.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/sales.html" class="nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                    <span>Sales & POS</span>
+                </a>
+                <a href="/purchases.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span>Purchases</span>
+                </a>
+                <a href="/inventory.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    <span>Inventory & Ledger</span>
+                </a>
+                <a href="/products.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    <span>Products & BCG</span>
+                </a>
+                <a href="/suppliers.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <span>Suppliers & Loss</span>
+                </a>
+                <a href="/customers.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span>Customers CRM</span>
+                </a>
+                <a href="/expenses.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    <span>Expenses</span>
+                </a>
+
+                <div class="nav-section-title">Decision Intelligence</div>
+                <a href="/ai-insights.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    <span>AI Decision Center</span>
+                </a>
+                <a href="/assistant.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    <span>Ask Your Data</span>
+                </a>
+                <a href="/reports.html" class="nav-link manager-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    <span>Profit & Loss Center</span>
+                </a>
+
+                <div class="nav-section-title admin-only">System</div>
+                <a href="/settings.html" class="nav-link admin-only">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                    <span>Settings & Logs</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-profile-compact">
+                    <div class="user-avatar user-avatar-display">A</div>
+                    <div class="user-info">
+                        <div class="user-name user-name-display">Loading...</div>
+                        <div class="user-role-badge user-role-display">ADMIN</div>
+                    </div>
+                    <button onclick="Auth.logout()" class="action-btn" title="Logout">⏻</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-wrapper">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h1 class="page-title">Sales & Point of Sale (POS)</h1>
+                </div>
+                <div class="topbar-right">
+                    <button class="btn btn-primary" onclick="openPosModal()">🛒 New POS Checkout</button>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <select id="filter-customer" class="form-control" style="width: 220px;" onchange="loadSales(0)">
+                            <option value="">All Customers</option>
+                        </select>
+                        <select id="filter-status" class="form-control" style="width: 160px;" onchange="loadSales(0)">
+                            <option value="">All Statuses</option>
+                            <option value="COMPLETED">Completed</option>
+                            <option value="CANCELLED">Cancelled</option>
+                            <option value="REFUNDED">Refunded</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="btn btn-secondary btn-sm" onclick="exportReportCsv('sales')">📥 Export Sales CSV</button>
+                    </div>
+                </div>
+
+                <!-- Sales Data Table -->
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Invoice #</th>
+                                <th>Date & Time</th>
+                                <th>Customer</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th>Total Amount</th>
+                                <th>Net Profit</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sales-tbody">
+                            <tr><td colspan="8" class="text-muted">Loading sales...</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination-container">
+                        <span>Showing sales ledger records</span>
+                        <div class="pagination-controls" id="pagination-ctrls"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- POS Modal -->
+    <div id="pos-modal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 950px;">
+            <div class="modal-header">
+                <h2 class="modal-title">🛒 New POS Sale Checkout</h2>
+                <button class="modal-close" onclick="Utils.closeModal('pos-modal')">✕</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px;">
+                <!-- Product Selector Grid -->
+                <div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search catalog by name or SKU..." oninput="filterPosProducts(this.value)">
+                    </div>
+                    <div id="pos-product-picker" style="display: flex; flex-direction: column; gap: 8px; max-height: 400px; overflow-y: auto; padding-right: 4px;">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- Cart & Checkout Details -->
+                <div style="background: rgba(0,0,0,0.2); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-color); display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div class="form-group">
+                            <label class="form-label">Customer</label>
+                            <select id="pos-customer-select" class="form-control"></select>
+                        </div>
+
+                        <div style="max-height: 220px; overflow-y: auto; margin-bottom: 14px;">
+                            <table class="data-table" style="font-size: 12.5px;">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Price</th>
+                                        <th>Qty</th>
+                                        <th>Total</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-tbody">
+                                    <tr><td colspan="5" class="text-muted text-center">Cart is empty</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Payment Method</label>
+                                <select id="pos-payment-method" class="form-control">
+                                    <option value="UPI">UPI / QR Code</option>
+                                    <option value="CARD">Debit / Credit Card</option>
+                                    <option value="CASH">Cash</option>
+                                    <option value="BANK_TRANSFER">Bank Transfer / NEFT</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Discount (₹)</label>
+                                <input type="number" id="pos-order-discount" class="form-control" value="0" min="0" oninput="updateCartTotals()">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 14px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px;">
+                            <span class="text-muted">Subtotal:</span>
+                            <span id="pos-subtotal">₹0.00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px;">
+                            <span class="text-muted">Tax (18% GST):</span>
+                            <span id="pos-tax">₹0.00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 18px; font-weight: 800; color: #fff; margin-bottom: 16px;">
+                            <span>Net Total:</span>
+                            <span id="pos-total" style="color: var(--success);">₹0.00</span>
+                        </div>
+
+                        <button class="btn btn-primary" style="width: 100%; padding: 12px;" onclick="submitPosSale()">✓ Complete Sale & Generate Invoice</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invoice Modal -->
+    <div id="invoice-modal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 600px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--border-color); padding-bottom: 16px; margin-bottom: 20px;">
+                <div>
+                    <h2 style="font-size: 20px; font-weight: 800; color: #fff;">IntelliERP Tax Invoice</h2>
+                    <p style="font-size: 12px; color: var(--text-muted);">Mini ERP & AI Business Intelligence</p>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 16px; font-weight: 700; color: var(--primary);" id="inv-number">INV-XXXX</div>
+                    <div style="font-size: 12px; color: var(--text-muted);" id="inv-date">-</div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 18px; font-size: 13px;">
+                <div>
+                    <span class="text-muted">Billed To:</span>
+                    <div style="font-weight: 700; color: #fff;" id="inv-customer">Customer Name</div>
+                </div>
+                <div style="text-align: right;">
+                    <span class="text-muted">Status:</span>
+                    <div id="inv-status"></div>
+                </div>
+            </div>
+
+            <table class="data-table" style="margin-bottom: 20px;">
+                <thead>
+                    <tr>
+                        <th>Item Description</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="inv-items-tbody"></tbody>
+            </table>
+
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 20px;">
+                <div style="width: 250px; display: flex; flex-direction: column; gap: 6px; font-size: 13px;">
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="text-muted">Subtotal:</span>
+                        <strong id="inv-subtotal">₹0.00</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="text-muted">Discount:</span>
+                        <strong id="inv-discount" style="color: var(--warning);">₹0.00</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span class="text-muted">GST Tax:</span>
+                        <strong id="inv-tax">₹0.00</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 16px; border-top: 1px solid var(--border-color); padding-top: 8px;">
+                        <span>Total Paid:</span>
+                        <strong style="color: var(--success);" id="inv-total">₹0.00</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 11.5px; color: var(--text-muted); margin-top: 4px;">
+                        <span>Profit Calculated:</span>
+                        <span id="inv-profit" style="color: #34d399;">₹0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color); padding-top: 16px;">
+                <span style="font-size: 12px; color: var(--text-muted);">Payment: <strong id="inv-payment">UPI</strong></span>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn btn-secondary btn-sm" onclick="window.print()">🖨 Print Invoice</button>
+                    <button class="btn btn-primary btn-sm" onclick="Utils.closeModal('invoice-modal')">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Modal -->
+    <div id="cancel-modal" class="modal-overlay">
+        <div class="modal-container" style="max-width: 450px;">
+            <div class="modal-header">
+                <h3 class="modal-title">Cancel Sale Order</h3>
+                <button class="modal-close" onclick="Utils.closeModal('cancel-modal')">✕</button>
+            </div>
+            <p style="font-size: 13.5px; color: var(--text-secondary); margin-bottom: 16px;">
+                Are you sure you want to cancel <strong id="cancel-sale-inv" style="color: #fff;"></strong>? This will immediately restore warehouse stock and log an audit reversal.
+            </p>
+            <div class="form-group">
+                <label class="form-label">Cancellation Reason</label>
+                <input type="text" id="cancel-reason" class="form-control" placeholder="e.g. Customer changed mind, duplicate transaction">
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+                <button class="btn btn-secondary btn-sm" onclick="Utils.closeModal('cancel-modal')">Dismiss</button>
+                <button class="btn btn-danger btn-sm" onclick="confirmCancelSale()">Confirm Cancellation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/api.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/sales.js"></script>
+    <script src="/js/reports.js"></script>
+</body>
+</html>
