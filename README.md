@@ -4,8 +4,9 @@
 
 [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3.4-brightgreen.svg)](https://spring.io/projects/spring-boot)
-[![Spring Security](https://img.shields.io/badge/Security-JWT%20Bearer-blue.svg)](https://spring.io/projects/spring-security)
-[![Database](https://img.shields.io/badge/Database-H2%20(MySQL%208%20Mode)-yellow.svg)](https://www.h2database.com/)
+[![Security](https://img.shields.io/badge/Security-JWT%20Bearer-blue.svg)](https://spring.io/projects/spring-security)
+[![CI/CD](https://github.com/Sky-ydv2008/bharat/actions/workflows/ci.yml/badge.svg)](https://github.com/Sky-ydv2008/bharat/actions/workflows/ci.yml)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Sky-ydv2008/bharat)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
