@@ -592,3 +592,68 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.25);
 }
+
+/* PWA Install UI */
+.pwa-install-container {
+    padding: 12px 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.pwa-install-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    border-radius: var(--radius-md);
+    color: #a5b4fc;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-all);
+}
+
+.pwa-install-btn:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.4) 0%, rgba(139, 92, 246, 0.4) 100%);
+    border-color: #6366f1;
+    color: #ffffff;
+    box-shadow: 0 0 16px rgba(99, 102, 241, 0.3);
+    transform: translateY(-1px);
+}
+
+.pwa-floating-badge {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    animation: pwaSlideUp 0.4s ease-out;
+}
+
+.pwa-floating-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    font-size: 13.5px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.45);
+    cursor: pointer;
+    transition: var(--transition-all);
+}
+
+.pwa-floating-btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.6);
+}
+
+@keyframes pwaSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

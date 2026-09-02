@@ -1,0 +1,64 @@
+{
+  "name": "IntelliERP — AI Decision Platform",
+  "short_name": "IntelliERP",
+  "description": "AI-Powered Mini ERP & Decision Intelligence Platform for Modern Businesses",
+  "start_url": "/login.html",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "background_color": "#0b0f19",
+  "theme_color": "#6366f1",
+  "orientation": "any",
+  "lang": "en-US",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View live business KPIs and health score",
+      "url": "/dashboard.html",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "POS Terminal",
+      "short_name": "POS",
+      "description": "Open Point of Sale register",
+      "url": "/sales.html",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "AI Decision Insights",
+      "short_name": "AI Insights",
+      "description": "Analyze business anomalies and loss vectors",
+      "url": "/ai-insights.html",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Inventory Ledger",
+      "short_name": "Inventory",
+      "description": "Manage products, stock levels, and audit trail",
+      "url": "/inventory.html",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
